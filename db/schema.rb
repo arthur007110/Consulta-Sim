@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_12_203744) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_13_205527) do
   create_table "consulta", force: :cascade do |t|
     t.string "pacienteCpf"
     t.string "medicoCpf"
@@ -32,6 +32,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_12_203744) do
     t.string "complemento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "paciente_id", null: false
+    t.index ["paciente_id"], name: "index_enderecos_on_paciente_id"
   end
 
   create_table "medicos", force: :cascade do |t|
@@ -51,11 +53,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_12_203744) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "endereco_id", null: false
-    t.index ["endereco_id"], name: "index_pacientes_on_endereco_id"
   end
 
   add_foreign_key "consulta", "medicos"
   add_foreign_key "consulta", "pacientes"
-  add_foreign_key "pacientes", "enderecos"
+  add_foreign_key "enderecos", "pacientes"
 end

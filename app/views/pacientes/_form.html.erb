@@ -31,6 +31,33 @@
     <%= form.text_field :email %>
   </div>
 
+  <%= form.fields_for :endereco do |fend| %>
+    <div>
+      <%= fend.label :logradouro, style: "display: block" %>>
+      <%= fend.text_field :logradouro %>
+    </div>
+
+    <div>
+      <%= fend.label :bairro, style: "display: block" %>>
+      <%= fend.text_field :bairro %>
+    </div>
+
+    <div>
+      <%= fend.label :cidade, style: "display: block" %>>
+      <%= fend.text_field :cidade %>
+    </div>
+
+    <div>
+      <%= fend.label :cep, style: "display: block" %>>
+      <%= fend.text_field :cep %>
+    </div>
+
+    <div>
+      <%= fend.label :complemento, style: "display: block" %>>
+      <%= fend.text_field :complemento %>
+    </div>
+  <% end %>
+
   <div>
     <%= form.submit %>
   </div>
