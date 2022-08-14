@@ -12,13 +12,11 @@
   <% end %>
 
   <div>
-    <%= form.label :pacienteCpf, style: "display: block" %>
-    <%= form.text_field :pacienteCpf %>
+    <%= form.collection_select(:paciente_id, Paciente.all, :id, :nome) %>
   </div>
 
   <div>
-    <%= form.label :medicoCpf, style: "display: block" %>
-    <%= form.text_field :medicoCpf %>
+    <%= form.collection_select(:medico_id, Medico.all, :id, :nome) %>
   </div>
 
   <div>

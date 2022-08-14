@@ -65,6 +65,6 @@ class ConsultaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def consultum_params
-      params.require(:consultum).permit(:pacienteCpf, :medicoCpf, :data, :horario)
+      params.require(:consultum).permit(:paciente_id, :medico_id, :data, :horario)
     end
 end

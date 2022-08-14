@@ -1,17 +1,17 @@
 <div id="<%= dom_id consultum %>">
   <p>
-    <strong>Pacientecpf:</strong>
-    <%= consultum.pacienteCpf %>
+    <strong>Paciente:</strong>
+    <%= Paciente.find(consultum.paciente_id).nome %>
   </p>
 
   <p>
-    <strong>Medicocpf:</strong>
-    <%= consultum.medicoCpf %>
+    <strong>Medico:</strong>
+    <%= Medico.find(consultum.medico_id).nome %>
   </p>
 
   <p>
     <strong>Data:</strong>
-    <%= consultum.data %>
+    <%= consultum.data.strftime("%d/%m/%Y") %>
   </p>
 
   <p>

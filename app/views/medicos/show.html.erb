@@ -2,6 +2,31 @@
 
 <%= render @medico %>
 
+<hr>
+<h2>
+  Consultas
+</h2>
+<table>
+  <tr>
+    <th>Paciente</th>
+    <th>Data</th>
+    <th>Horário</th>
+  </tr>
+    <% Consultum.where(medico_id: @medico.id).each do |consulta| %>
+      <tr>
+        <td>
+          <%= Paciente.find(consulta.paciente_id).nome %>
+        </td>
+        <td>
+          <%= consulta.data.strftime("%d/%m/%Y") %>
+        </td>
+        <td>
+          <%= consulta.horario %>
+        </td>
+      </tr>
+    <% end %>
+</table>
+
 <div>
   <%= link_to "Edit this medico", edit_medico_path(@medico) %> |
   <%= link_to "Back to medicos", medicos_path %>
