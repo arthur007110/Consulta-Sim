@@ -5,7 +5,7 @@ class CreateMedicos < ActiveRecord::Migration[7.0]
       t.string :nome
       t.string :email
       t.string :especialidade
-      t.decimal :crm
+      t.string :crm
 
       t.timestamps
     end
