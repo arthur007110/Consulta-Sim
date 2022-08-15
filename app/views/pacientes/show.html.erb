@@ -2,6 +2,18 @@
 
 <%= render @paciente %>
 
+<div class="button-container">
+  <span class="button">
+    <%= link_to "Editar paciente", edit_paciente_path(@paciente) %>
+  </span>
+  <span class="button">
+    <%= button_to "Deletar paciente", @paciente, method: :delete %>
+  </span>
+  <span class="button">
+    <%= link_to "Voltar para pacientes", pacientes_path %>
+  </span>
+</div>
+
 <hr>
 <h2>
   Consultas
@@ -26,10 +38,3 @@
     </tr>
   <% end %>
 </table>
-
-<div>
-  <%= link_to "Edit this paciente", edit_paciente_path(@paciente) %> |
-  <%= link_to "Back to pacientes", pacientes_path %>
-
-  <%= button_to "Destroy this paciente", @paciente, method: :delete %>
-</div>

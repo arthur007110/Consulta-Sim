@@ -1,22 +1,15 @@
 <div id="<%= dom_id consultum %>">
-  <p>
-    <strong>Paciente:</strong>
-    <%= Paciente.find(consultum.paciente_id).nome %>
-  </p>
+  <div class="card">
+    <strong style="font-size: 1rem">Paciente:</strong>
+    <%= Paciente.find(consultum.paciente_id).nome %><br/><br/>
 
-  <p>
-    <strong>Medico:</strong>
-    <%= Medico.find(consultum.medico_id).nome %>
-  </p>
+    <strong style="font-size: 1rem">Medico:</strong>
+    <%= Medico.find(consultum.medico_id).nome %><br/><br/>
 
-  <p>
-    <strong>Data:</strong>
-    <%= consultum.data.strftime("%d/%m/%Y") %>
-  </p>
+    <strong style="font-size: 1rem">Data:</strong>
+    <%= consultum.data.strftime("%d/%m/%Y") %><br/><br/>
 
-  <p>
-    <strong>Horario:</strong>
+    <strong style="font-size: 1rem">Horario:</strong>
     <%= consultum.horario %>
-  </p>
-
+  </div>
 </div>

@@ -2,8 +2,20 @@
 
 <%= render @medico %>
 
+<div class="button-container">
+  <span class="button">
+    <%= link_to "Editar medico", edit_medico_path(@medico) %>
+  </span>
+  <span class="button">
+    <%= button_to "Deletar medico", @medico, method: :delete %>
+  </span>
+  <span class="button">
+    <%= link_to "Voltar para medicos", medicos_path %>
+  </span>
+</div>
+
 <hr>
-<h2>
+<h2 style="margin-left: 1rem">
   Consultas
 </h2>
 <table>
@@ -26,10 +38,3 @@
       </tr>
     <% end %>
 </table>
-
-<div>
-  <%= link_to "Edit this medico", edit_medico_path(@medico) %> |
-  <%= link_to "Back to medicos", medicos_path %>
-
-  <%= button_to "Destroy this medico", @medico, method: :delete %>
-</div>

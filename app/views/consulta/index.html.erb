@@ -1,14 +1,38 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Consulta</h1>
+<h1 style="margin-left: 1rem">Consultas</h1>
 
-<div id="consulta">
-  <% @consulta.each do |consultum| %>
-    <%= render consultum %>
-    <p>
-      <%= link_to "Show this consultum", consultum %>
-    </p>
+<span class="button" style="display: table; margin: 0 auto; margin-bottom: 5px;">
+  <%= link_to "Agendar consulta", new_consultum_path %>
+</span>
+
+<table>
+  <tr>
+    <th>Paciente</th>
+    <th>Medico</th>
+    <th>Data</th>
+    <th>Horário</th>
+    <th>Ações</th>
+  </tr>
+    <% @consulta.each do |consultum| %>
+    <tr>
+      <td>
+        <%= Paciente.find(consultum.paciente_id).nome %>
+      </td>
+      <td>
+        <%= Medico.find(consultum.medico_id).nome %>
+      </td>
+      <td>
+        <%= consultum.data.strftime("%d/%m/%Y") %>
+      </td>
+      <td>
+        <%= consultum.horario %>
+      </td>
+      <td>
+        <span class="button">
+          <%= link_to "Exibir esta consulta", consultum %>
+        </span>
+      </td>
+    </tr>
   <% end %>
-</div>
-
-<%= link_to "New consultum", new_consultum_path %>
+</table>

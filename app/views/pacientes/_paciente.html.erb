@@ -1,52 +1,33 @@
 <div id="<%= dom_id paciente %>">
-  <p>
-    <strong>Nome:</strong>
-    <%= paciente.nome %>
-  </p>
+  <div class="card">
+    <strong style="font-size: 1rem">Nome:</strong>
+    <%= paciente.nome %><br/><br/>
 
-  <p>
-    <strong>Nascimento:</strong>
-    <%= paciente.nascimento %>
-  </p>
+    <strong style="font-size: 1rem">Cpf:</strong>
+    <%= paciente.cpf %><br/><br/>
 
-  <p>
-    <strong>Cpf:</strong>
-    <%= paciente.cpf %>
-  </p>
+    <strong style="font-size: 1rem">Email:</strong>
+    <%= paciente.email %><br/><br/>
 
-  <p>
-    <strong>Email:</strong>
-    <%= paciente.email %>
-  </p>
+    <strong style="font-size: 1rem">Nascimento:</strong>
+    <%= paciente.nascimento %><br/><br/>
 
-  <p>
-    <strong>Endereço:</strong>
-    <div>
-      <p>
-        <strong>Logradouro:</strong>
-        <%= paciente.endereco.logradouro %>
-      </p>
+    <strong style="font-size: 1rem">Endereço:</strong>
+    <div class="card">
+      <strong style="font-size: 1rem">Logradouro:</strong>
+      <%= paciente.endereco.logradouro %><br/><br/>
 
-      <p>
-        <strong>Bairro:</strong>
-        <%= paciente.endereco.bairro %>
-      </p>
+      <strong style="font-size: 1rem">Bairro:</strong>
+      <%= paciente.endereco.bairro %><br/><br/>
 
-      <p>
-        <strong>Cidade:</strong>
-        <%= paciente.endereco.cidade %>
-      </p>
+      <strong style="font-size: 1rem">Cidade:</strong>
+      <%= paciente.endereco.cidade %><br/><br/>
 
-      <p>
-        <strong>CEP:</strong>
-        <%= paciente.endereco.cep %>
-      </p>
+      <strong style="font-size: 1rem">Cep:</strong>
+      <%= paciente.endereco.cep %><br/><br/>
 
-      <p>
-        <strong>Complemento:</strong>
-        <%= paciente.endereco.complemento %>
-      </p>
+      <strong style="font-size: 1rem">Complemento:</strong>
+      <%= paciente.endereco.complemento %><br/><br/>
     </div>
-  </p>
-
+  </div>
 </div>

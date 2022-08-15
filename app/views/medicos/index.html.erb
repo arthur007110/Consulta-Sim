@@ -1,14 +1,40 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Medicos</h1>
-
-<div id="medicos">
-  <% @medicos.each do |medico| %>
-    <%= render medico %>
-    <p>
-      <%= link_to "Show this medico", medico %>
-    </p>
+<h1 style="margin-left: 1rem">Medicos</h1>
+<span class="button" style="display: table; margin: 0 auto; margin-bottom: 5px;">
+  <%= link_to "New medico", new_medico_path %>
+</span>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Cpf</th>
+    <th>Crm</th>
+    <th>Especialidade</th>
+    <th>Ações</th>
+  </tr>
+    <% @medicos.each do |medico| %>
+    <tr>
+      <td>
+        <%= medico.nome %>
+      </td>
+      <td>
+        <%= medico.email %>
+      </td>
+      <td>
+        <%= medico.cpf %>
+      </td>
+      <td>
+        <%= medico.crm %>
+      </td>
+      <td>
+        <%= medico.especialidade %>
+      </td>
+      <td>
+        <span class="button">
+          <%= link_to "Show this medico", medico %>
+        </span>
+      </td>
+    </tr>
   <% end %>
-</div>
-
-<%= link_to "New medico", new_medico_path %>
+</table>
