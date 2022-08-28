@@ -1,15 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  cpf: MyString
-  nome: MyString
-  email: MyString
-  especialidade: MyString
-  crm: 9.99
+# one:
+#   cpf: MyString
+#   nome: MyString
+#   email: MyString
+#   especialidade: MyString
+#   crm: 9.99
+#   created_at: 2022-08-12
+#   updated_at: 2022-08-12
 
-two:
-  cpf: MyString
-  nome: MyString
-  email: MyString
-  especialidade: MyString
-  crm: 9.99
+# two:
+#   cpf: MyString
+#   nome: MyString
+#   email: MyString
+#   especialidade: MyString
+#   crm: 9.99
+#   created_at: 2022-08-12
+#   updated_at: 2022-08-12
