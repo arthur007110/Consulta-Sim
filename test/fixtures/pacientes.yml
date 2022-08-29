@@ -1,13 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  nome: MyString
-  nascimento: 2022-08-11
-  cpf: MyString
-  email: MyString
+# one:
+#   nome: MyString
+#   nascimento: 2022-08-11
+#   cpf: MyString
+#   email: MyString
+#   created_at: 2022-08-12
+#   updated_at: 2022-08-12
 
-two:
-  nome: MyString
-  nascimento: 2022-08-11
-  cpf: MyString
-  email: MyString
+# two:
+#   nome: MyString
+#   nascimento: 2022-08-11
+#   cpf: MyString
+#   email: MyString
+#   created_at: 2022-08-12
+#   updated_at: 2022-08-12
