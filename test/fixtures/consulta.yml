@@ -1,13 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  pacienteCpf: MyString
-  medicoCpf: MyString
-  data: 2022-08-12
-  horario: MyString
+# one:
+#   paciente_id: 1
+#   medico_id: 1
+#   data: 2022-08-12
+#   horario: MyString
+#   created_at: 2022-08-12
+#   updated_at: 2022-08-12
 
-two:
-  pacienteCpf: MyString
-  medicoCpf: MyString
-  data: 2022-08-12
-  horario: MyString
+# two:
+#   paciente_id: 1
+#   medico_id: 1
+#   data: 2022-08-12
+#   horario: MyString
+#   created_at: 2022-08-12
+#   updated_at: 2022-08-12

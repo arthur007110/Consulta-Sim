@@ -1,15 +1,21 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  cep: MyString
-  cidade: MyString
-  bairro: MyString
-  logradouro: MyString
-  complemento: MyString
+# one:
+#   cep: MyString
+#   cidade: MyString
+#   bairro: MyString
+#   logradouro: MyString
+#   complemento: MyString
+#   created_at: 2022-08-12
+#   updated_at: 2022-08-12
+#   paciente_id: 2
 
-two:
-  cep: MyString
-  cidade: MyString
-  bairro: MyString
-  logradouro: MyString
-  complemento: MyString
+# two:
+#   cep: MyString
+#   cidade: MyString
+#   bairro: MyString
+#   logradouro: MyString
+#   complemento: MyString
+#   created_at: 2022-08-12
+#   updated_at: 2022-08-12
+#   paciente_id: 2
