@@ -1,41 +1,38 @@
-medico_id = 0
-
-Given('o medico de crm {string} existe') do |string|
+Given('o medico de crm {string} existe') do |crm|
   medico = Medico.new(
     nome: 'Arthur Costa',
     cpf: '12345678912',
     email: 'arthur@email.com',
-    crm: '123456',
+    crm: crm,
     especialidade: 'Cardiologista'
   )
 
   medico.save
-
-  medico_id = medico.id
 end
 
-Given('estou na pagina de editar o medico de crm {string}') do |string|
-  visit('/medicos/'+ medico_id.to_s() +'/edit')
+Given('estou na pagina de editar o medico de crm {string}') do |crm|
+  medico = Medico.find_by('crm = ' + crm)
+  visit('/medicos/'+ medico.id.to_s() +'/edit')
 end
 
-When('eu preencho o campo nome do medico com {string}') do |string|
-  fill_in('medico_nome', with: 'Arthur Costa')
+When('eu preencho o campo nome do medico com {string}') do |nome|
+  fill_in('medico_nome', with: nome)
 end
 
-When('eu preencho o campo cpf do medico com {string}') do |string|
-  fill_in('medico_cpf', with: '12345678912')
+When('eu preencho o campo cpf do medico com {string}') do |cpf|
+  fill_in('medico_cpf', with: cpf)
 end
 
-When('eu preencho o campo crm do medico com {string}') do |string|
-  fill_in('medico_crm', with: '123456')
+When('eu preencho o campo crm do medico com {string}') do |crm|
+  fill_in('medico_crm', with: crm)
 end
 
-When('eu preencho o campo email do medico com {string}') do |string|
-  fill_in('medico_email', with: 'arthur@email.com')
+When('eu preencho o campo email do medico com {string}') do |email|
+  fill_in('medico_email', with: email)
 end
 
-When('eu preencho o campo especialidade com {string}') do |string|
-  fill_in('medico_especialidade', with: 'Cardiologista')
+When('eu preencho o campo especialidade com {string}') do |especialidade|
+  fill_in('medico_especialidade', with: especialidade)
 end
 
 When('eu clico no botao update medico') do
