@@ -18,7 +18,6 @@ end
 Given('estou na pagina de visualizar o paciente de cpf {string}') do |cpf|
   paciente = Paciente.find_by('cpf = ' + cpf)
   visit('/pacientes/' + paciente.id.to_s())
-  save_and_open_page
 end
 
 Then('eu vejo ao menos uma consulta para o paciente') do

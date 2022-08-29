@@ -27,6 +27,5 @@ When('eu clico no botao update paciente') do
 end
 
 Then('eu vejo uma mensagem informando que o paciente foi atualizado com sucesso') do
-  save_and_open_page
   assert page.has_content?('Paciente was successfully updated.')
 end
