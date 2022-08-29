@@ -1,5 +1,5 @@
 Feature: editar medico
-  As a usuário do sistema
+  As a usuario do sistema
   I want to editar os dados de um medico
   So that eu manter o cadastro dos medicos atualizados
 
